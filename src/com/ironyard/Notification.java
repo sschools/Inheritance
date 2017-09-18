@@ -2,7 +2,7 @@ package com.ironyard;
 
 import java.time.LocalDateTime;
 
-public class Notification {
+public abstract class Notification {
     private LocalDateTime createdAt;
     private String subject;
     private String body;
@@ -26,9 +26,8 @@ public class Notification {
         return body;
     }
 
-    public void transport() {
-        throw new NoTransportException();
-    }
+    public abstract void transport();
+
 
     public void showStatus() {
         System.out.println(this.status);

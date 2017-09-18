@@ -13,5 +13,9 @@ public class Main {
         myText.showStatus();
 
         myEmail.someText();
+
+        Object myEmailClone = myEmail.clone();
+
+        System.out.println("Are they equal: " + myEmail.equals(myEmailClone));
     }
 }
